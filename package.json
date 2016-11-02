@@ -1,0 +1,29 @@
+{
+  "name": "html-webpack-event-plugin",
+  "version": "0.1.0",
+  "description": "the events of html-webpack-plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pfdgithub/html-webpack-event-plugin"
+  },
+  "keywords": [
+    "html",
+    "webpack",
+    "event",
+    "plugin"
+  ],
+  "author": "pfdnpm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pfdgithub/html-webpack-event-plugin"
+  },
+  "homepage": "https://github.com/pfdgithub/html-webpack-event-plugin",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
