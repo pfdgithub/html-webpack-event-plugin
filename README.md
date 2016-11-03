@@ -19,31 +19,41 @@ Sync:
 ## Installation
 
 ``` bash
-npm install html-webpack-event-plugin
+npm install --save-dev html-webpack-event-plugin
 ```
 
 ## Usage
+
+Even if you generate multiple files make sure that you add the HtmlWebpackEventPlugin only once.  
+
 ```javascript
-new HtmlWebpackPlugin({
-  alterChunks: function (htmlPluginData, chunks) {
-    return chunks;
-  },
-  beforeHtmlGeneration: function (htmlPluginData) {
-    return htmlPluginData;
-  },
-  beforeHtmlProcessing: function (htmlPluginData) {
-    return htmlPluginData;
-  },
-  alterAssetTags: function (htmlPluginData) {
-    return htmlPluginData;
-  },
-  afterHtmlProcessing: function (htmlPluginData) {
-    return htmlPluginData;
-  },
-  afterEmit: function (htmlPluginData) {
-    return htmlPluginData;
-  }
-})
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackEventPlugin = require('html-webpack-event-plugin');
+
+plugins: [
+  new HtmlWebpackEventPlugin(),
+  new HtmlWebpackPlugin(),
+  new HtmlWebpackPlugin({
+    alterChunks: function (htmlPluginData, chunks) {
+      return chunks;
+    },
+    beforeHtmlGeneration: function (htmlPluginData) {
+      return htmlPluginData;
+    },
+    beforeHtmlProcessing: function (htmlPluginData) {
+      return htmlPluginData;
+    },
+    alterAssetTags: function (htmlPluginData) {
+      return htmlPluginData;
+    },
+    afterHtmlProcessing: function (htmlPluginData) {
+      return htmlPluginData;
+    },
+    afterEmit: function (htmlPluginData) {
+      return htmlPluginData;
+    }
+  })
+]
 ```
 
 ## License
